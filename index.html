@@ -1,87 +1,97 @@
 <!DOCTYPE html>
-<html class="theme_dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Telegram: Join Group Chat</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ratnam All Rounder 🔥 – Join Telegram</title>
 
-<meta property="og:title" content="Ratnam All Rounder 🔥">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+.container {
+    padding: 20px;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ff4500;
+    margin-top: 40px;
+}
+.title {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #ff4500;
+}
+.subscribers {
+    font-size: 1.1em;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+.desc {
+    font-size: 1em;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.join-btn {
+    display: inline-block;
+    background: #ff4500;
+    color: #000;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.join-btn:hover {
+    background: #e03e00;
+}
+.footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+</style>
 
 </head>
 
 <body>
 
-<div class="tgme_page_wrap">
-  <div class="tgme_body_wrap">
-    <div class="tgme_page">
+<div class="container">
 
-      <!-- LOGO -->
-      <div class="tgme_page_photo">
-        <a onclick="redirectToLink()" style="cursor:pointer;">
-          <img class="tgme_page_photo_image" src="img/ratnam-all-rounder.jpg">
-        </a>
-      </div>
+    <!-- LOGO (update path if image name changes) -->
+    <img class="logo" src="logo-ratnam.jpg" alt="Ratnam All Rounder 🔥">
 
-      <!-- TITLE -->
-      <div class="tgme_page_title" dir="auto">
-        <span dir="auto">Ratnam All Rounder 🔥</span>
-      </div>
+    <!-- TITLE -->
+    <div class="title">Ratnam All Rounder 🔥</div>
 
-      <!-- SUBSCRIBERS -->
-      <div class="tgme_page_extra">
-        49 820 subscribers
-      </div>
+    <!-- SUBSCRIBERS -->
+    <div class="subscribers">49 820 subscribers</div>
 
-      <!-- DESCRIPTION -->
-      <div class="tgme_page_description" dir="auto">
-        Welcome to Ratnam All Rounder 🔥<br><br>
-        IPL 2025 Back To Back Match Pass 🏏<br><br>
-        All Rounder Analysis – Bookie Shock Mode ON ⚡
-      </div>
-
-      <!-- TIMER -->
-      <p class="available">
-        <span id="timer">60</span>
-      </p>
-
-      <!-- JOIN BUTTON -->
-      <div class="tgme_page_action">
-        <a onclick="redirectToLink()" style="cursor:pointer;" class="tgme_action_button_new">
-          Join Channel
-        </a>
-      </div>
-
-      <div class="tgme_page_additional">
-        You are invited to the channel <strong>Ratnam All Rounder 🔥</strong><br>
-        Click above to join.
-      </div>
-
+    <!-- DESCRIPTION -->
+    <div class="desc">
+        Welcome to <strong>Ratnam All Rounder 🔥</strong><br>
+        IPL predictions, match insights & all-rounder analysis!
     </div>
-  </div>
+
+    <!-- JOIN CTA -->
+    <a href="https://t.me/+C2Tll_DJChU1M2M1" class="join-btn" target="_blank">
+        👉 Join Telegram
+    </a>
+
+    <!-- OPTIONAL FOOTER -->
+    <div class="footer">
+        Powered by Ratnam All Rounder
+    </div>
+
 </div>
-
-<script>
-function redirectToLink() {
-  window.location.href = "https://telegram.me/+RCuEEYs53vhkOGE1";
-}
-</script>
-
-<script>
-let timeLeft = 60;
-function updateTimer() {
-  document.getElementById('timer').textContent = timeLeft + " seconds";
-  if (timeLeft <= 1) {
-    window.location.href = "https://telegram.me/+RCuEEYs53vhkOGE1";
-  }
-  timeLeft--;
-  if (timeLeft > 0) setTimeout(updateTimer, 1000);
-}
-updateTimer();
-</script>
 
 </body>
 </html>

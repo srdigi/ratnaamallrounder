@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>RATNAM All Rounder | IPL & T20 World Cup Desk</title>
+<title>RATNAM All Rounder | IPL & T20 World Cup</title>
 
 <!-- SINGLE SAFE CUSTOM EVENT -->
 <script>
@@ -20,9 +20,8 @@ t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init','CUSTOM_PIXEL_ID');
-fbq('trackCustom','RatnamPremiumView');
+fbq('trackCustom','RatnamView');
 </script>
 
 <style>
@@ -36,20 +35,20 @@ font-family:Poppins,Arial,sans-serif;
 color:#fff;
 }
 
-/* CLEAR DAYLIGHT CRICKET GROUND BACKGROUND */
+/* GUARANTEED CRICKET GROUND BACKGROUND */
 body{
 background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-url("https://images.unsplash.com/photo-1600185365483-26d7e9e3c0a4?auto=format&fit=crop&w=1600&q=90")
+linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55)),
+url("https://picsum.photos/seed/cricketstadium/1600/2400")
 no-repeat center center/cover;
 }
 
-/* MAIN CONTAINER */
+/* ONE SCREEN CONTAINER */
 .container{
 height:100vh;
 max-width:420px;
 margin:auto;
-padding:22px 18px;
+padding:20px 16px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
@@ -64,19 +63,19 @@ align-items:center;
 }
 
 .logo{
-width:90px;
-height:90px;
+width:88px;
+height:88px;
 border-radius:50%;
 background:#111;
-box-shadow:0 0 20px rgba(255,204,0,.45);
-margin-bottom:8px;
+box-shadow:0 0 18px rgba(255,204,0,.5);
+margin-bottom:6px;
 }
 
 .tag{
 font-size:.75em;
 letter-spacing:2px;
 color:#ffcc00;
-font-weight:600;
+font-weight:700;
 }
 
 .title{
@@ -90,29 +89,17 @@ background:linear-gradient(90deg,#ffcc00,#ffffff);
 .subs{
 font-size:.9em;
 color:#eee;
-margin-top:4px;
 }
 
-/* CONTENT CARD */
+/* CARD */
 .card{
 margin:12px 0;
 padding:16px;
 border-radius:16px;
-background:rgba(0,0,0,.6);
+background:rgba(0,0,0,.55);
 border:1px solid rgba(255,204,0,.35);
-}
-
-.card h3{
-margin:0 0 6px;
-font-size:1em;
-color:#ffcc00;
-}
-
-.card p{
-margin:0;
 font-size:.88em;
 line-height:1.5;
-color:#f1f1f1;
 }
 
 /* CTA */
@@ -124,14 +111,10 @@ font-size:1.1em;
 font-weight:900;
 border-radius:50px;
 text-decoration:none;
-box-shadow:0 0 25px rgba(255,204,0,.65);
+box-shadow:0 0 22px rgba(255,204,0,.65);
 }
 
-.join-btn:active{
-transform:scale(.97);
-}
-
-/* FAKE JOIN TOAST */
+/* FAKE JOIN POPUP */
 .toast{
 position:fixed;
 bottom:18px;
@@ -143,17 +126,15 @@ padding:10px 18px;
 border-radius:30px;
 font-size:.8em;
 color:#ffcc00;
-box-shadow:0 0 20px rgba(0,0,0,.6);
 opacity:0;
 transition:.4s;
 z-index:999;
 }
 .toast.show{opacity:1}
 
-/* FOOTER */
 .footer{
 font-size:.7em;
-color:#ddd;
+color:#eee;
 }
 </style>
 </head>
@@ -162,54 +143,42 @@ color:#ddd;
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="header">
-<img src="logo-ratnam.png" class="logo" alt="RATNAM">
+<img src="logo-ratnam.png" class="logo">
 <div class="tag">IPL & T20 WORLD CUP</div>
 <div class="title">RATNAM All Rounder</div>
 <div class="subs">49,773 Cricket Followers</div>
 </div>
 
-<!-- CONTENT -->
 <div class="card">
-<h3>What We Cover</h3>
-<p>
-IPL match analysis & session trends,<br>
-ICC T20 World Cup insights,<br>
-pitch behaviour & team dynamics<br>
-for serious cricket viewers.
-</p>
+IPL & World Cup T20 match analysis,<br>
+session trends, pitch reading<br>
+and team behaviour insights.
 </div>
 
-<!-- CTA -->
 <a class="join-btn" href="https://t.me/+C2Tll_DJChU1M2M1">
 JOIN TELEGRAM
 </a>
 
 <div class="footer">
-© 2026 RATNAM • Cricket Analysis Desk
+© 2026 RATNAM • Cricket Analysis
 </div>
 
 </div>
 
-<!-- FAKE JOIN NOTIFICATION -->
 <div class="toast" id="toast"></div>
 
 <script>
-const names=[
-"Rahul","Aman","Suresh","Vikram","Rohit",
-"Ankit","Kunal","Deepak","Mohit","Arjun",
-"Pradeep","Nikhil","Pankaj","Ramesh","Sahil"
-];
+const names=["Rahul","Aman","Suresh","Rohit","Vikram","Ankit","Deepak","Mohit","Arjun","Sahil"];
 let i=0;
 const toast=document.getElementById("toast");
 
 setInterval(()=>{
-toast.innerText = names[i] + " joined the IPL & T20 desk";
+toast.innerText = names[i] + " just joined";
 toast.classList.add("show");
-setTimeout(()=>toast.classList.remove("show"),2200);
+setTimeout(()=>toast.classList.remove("show"),2000);
 i=(i+1)%names.length;
-},3500);
+},3200);
 </script>
 
 </body>

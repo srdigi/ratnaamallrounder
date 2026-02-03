@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>RATNAM All Rounder 🔥</title>
+<title>RATNAM All Rounder | IPL & T20 World Cup Desk</title>
 
 <!-- SINGLE SAFE CUSTOM EVENT -->
 <script>
@@ -22,7 +22,7 @@ s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','CUSTOM_PIXEL_ID');
-fbq('trackCustom','RatnamView');
+fbq('trackCustom','RatnamPremiumView');
 </script>
 
 <style>
@@ -31,102 +31,134 @@ fbq('trackCustom','RatnamView');
 html,body{
 margin:0;
 height:100%;
-overflow:hidden; /* NO SCROLL */
-font-family:Poppins,Arial,sans-serif;
+overflow:hidden;
+font-family:'Poppins',Arial,sans-serif;
+color:#fff;
 }
 
-/* IPL POSTER STYLE BACKGROUND */
+/* PREMIUM CRICKET BACKGROUND */
 body{
 background:
-linear-gradient(rgba(255,255,255,.25),rgba(0,0,0,.45)),
-url("https://images.unsplash.com/photo-1593766788306-28561086694e?auto=format&fit=crop&w=1600&q=90")
+radial-gradient(circle at top,rgba(255,215,0,.15),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=90")
 no-repeat center center/cover;
 }
 
-/* FULL SCREEN CONTAINER */
+/* MAIN CONTAINER */
 .container{
 height:100vh;
 max-width:420px;
 margin:auto;
-padding:18px 16px;
+padding:22px 18px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 text-align:center;
 }
 
-/* TOP SECTION */
-.top{
+/* HEADER */
+.header{
 display:flex;
 flex-direction:column;
 align-items:center;
 }
 
 .logo{
-width:90px;
-height:90px;
+width:92px;
+height:92px;
 border-radius:50%;
-background:#fff;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-margin-bottom:8px;
+background:#0c0c0c;
+box-shadow:0 0 35px rgba(255,215,0,.45);
+margin-bottom:10px;
 }
 
-.badge{
-background:linear-gradient(90deg,#ffcc00,#ff9900);
-color:#000;
-padding:5px 14px;
-border-radius:20px;
-font-size:.8em;
-font-weight:800;
-margin-bottom:6px;
+.tag{
+font-size:.75em;
+letter-spacing:2px;
+color:#f5d36b;
+font-weight:600;
 }
 
 .title{
 font-size:2.1em;
 font-weight:900;
-color:#fff;
-text-shadow:0 3px 10px rgba(0,0,0,.6);
+margin-top:4px;
+background:linear-gradient(90deg,#f5d36b,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .subs{
-font-size:.95em;
-color:#f1f1f1;
-}
-
-/* CENTER CARD */
-.card{
-margin:10px 0;
-padding:14px;
-border-radius:16px;
-background:rgba(255,255,255,.92);
-box-shadow:0 12px 30px rgba(0,0,0,.15);
 font-size:.9em;
-line-height:1.5;
-color:#111;
+color:#ddd;
+margin-top:4px;
 }
 
-/* CTA BUTTON */
+/* PREMIUM CARD */
+.card{
+margin:12px 0;
+padding:18px;
+border-radius:18px;
+background:rgba(0,0,0,.65);
+border:1px solid rgba(255,215,0,.35);
+box-shadow:0 0 30px rgba(0,0,0,.7);
+}
+
+.card h3{
+margin:0 0 8px;
+font-size:1.05em;
+color:#f5d36b;
+letter-spacing:.5px;
+}
+
+.card p{
+margin:0;
+font-size:.88em;
+line-height:1.55;
+color:#eaeaea;
+}
+
+/* CTA */
 .join-btn{
-background:linear-gradient(135deg,#1fa2ff,#12d8fa);
-color:#fff;
-padding:15px;
-font-size:1.2em;
+background:linear-gradient(135deg,#f5d36b,#c9a227);
+color:#000;
+padding:16px;
+font-size:1.15em;
 font-weight:900;
 border-radius:50px;
 text-decoration:none;
-box-shadow:0 15px 35px rgba(31,162,255,.55);
-transition:.2s;
+box-shadow:0 0 35px rgba(255,215,0,.65);
+transition:.25s;
 }
 
 .join-btn:active{
 transform:scale(.97);
 }
 
+/* FAKE JOIN TOAST */
+.toast{
+position:fixed;
+bottom:18px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(0,0,0,.85);
+border:1px solid rgba(255,215,0,.4);
+padding:10px 18px;
+border-radius:30px;
+font-size:.8em;
+color:#f5d36b;
+box-shadow:0 0 25px rgba(0,0,0,.6);
+opacity:0;
+transition:.4s;
+z-index:999;
+}
+.toast.show{opacity:1}
+
 /* FOOTER */
 .footer{
 font-size:.7em;
-color:#eee;
-text-shadow:0 2px 6px rgba(0,0,0,.6);
+color:#aaa;
+letter-spacing:.4px;
 }
 </style>
 </head>
@@ -135,32 +167,56 @@ text-shadow:0 2px 6px rgba(0,0,0,.6);
 
 <div class="container">
 
-<!-- TOP -->
-<div class="top">
-<img src="logo-ratnam.png" alt="RATNAM" class="logo">
-<div class="badge">🔥 IPL SPECIAL</div>
+<!-- HEADER -->
+<div class="header">
+<img src="logo-ratnam.png" class="logo" alt="RATNAM">
+<div class="tag">IPL & T20 WORLD CUP DESK</div>
 <div class="title">RATNAM All Rounder</div>
-<div class="subs">49,773 Trusted Members</div>
+<div class="subs">49,773 Serious Cricket Followers</div>
 </div>
 
-<!-- CENTER -->
+<!-- CONTENT -->
 <div class="card">
-🏏 IPL Match & Session Tips<br>
-🎯 Smart & Safe Predictions<br>
-⚡ Fast Updates Before Toss
+<h3>Coverage Includes</h3>
+<p>
+IPL match & session behaviour analysis,  
+ICC T20 World Cup insights, pitch & team reading,  
+and structured data for disciplined cricket followers.
+</p>
 </div>
 
 <!-- CTA -->
 <a class="join-btn" href="https://t.me/+C2Tll_DJChU1M2M1">
-JOIN TELEGRAM NOW
+ACCESS PREMIUM TELEGRAM
 </a>
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 RATNAM All Rounder
+© 2026 RATNAM • IPL & T20 World Cup Analysis
 </div>
 
 </div>
+
+<!-- FAKE JOIN TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+const names=[
+"Rahul","Aman","Suresh","Vikram","Rohit",
+"Ankit","Kunal","Deepak","Mohit","Arjun",
+"Pradeep","Nikhil","Pankaj","Ramesh","Sahil"
+];
+
+let i=0;
+const toast=document.getElementById("toast");
+
+setInterval(()=>{
+toast.innerText = names[i] + " joined for IPL & T20 WC insights";
+toast.classList.add("show");
+setTimeout(()=>toast.classList.remove("show"),2200);
+i=(i+1)%names.length;
+},3500);
+</script>
 
 </body>
 </html>

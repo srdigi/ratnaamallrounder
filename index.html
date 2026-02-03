@@ -20,13 +20,13 @@ t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init','CUSTOM_PIXEL_ID');
 fbq('trackCustom','RatnamView');
 </script>
 
 <style>
 *{box-sizing:border-box}
-
 html,body{
 margin:0;
 height:100%;
@@ -35,20 +35,30 @@ font-family:Poppins,Arial,sans-serif;
 color:#fff;
 }
 
-/* GUARANTEED CRICKET GROUND BACKGROUND */
-body{
-background:
-linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55)),
-url("https://picsum.photos/seed/cricketstadium/1600/2400")
+/* BACKGROUND IMAGE (DIFFERENT CRICKET VIBE) */
+.bg{
+position:fixed;
+inset:0;
+background:url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80")
 no-repeat center center/cover;
+z-index:-2;
 }
 
-/* ONE SCREEN CONTAINER */
+/* BLUR OVERLAY */
+.blur{
+position:fixed;
+inset:0;
+backdrop-filter:blur(14px);
+background:rgba(0,0,0,.55);
+z-index:-1;
+}
+
+/* MAIN CONTAINER */
 .container{
 height:100vh;
 max-width:420px;
 margin:auto;
-padding:20px 16px;
+padding:22px 18px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
@@ -56,19 +66,13 @@ text-align:center;
 }
 
 /* HEADER */
-.header{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
 .logo{
-width:88px;
-height:88px;
+width:90px;
+height:90px;
 border-radius:50%;
 background:#111;
-box-shadow:0 0 18px rgba(255,204,0,.5);
-margin-bottom:6px;
+box-shadow:0 0 22px rgba(255,204,0,.5);
+margin:0 auto 8px;
 }
 
 .tag{
@@ -91,7 +95,7 @@ font-size:.9em;
 color:#eee;
 }
 
-/* CARD */
+/* CONTENT CARD */
 .card{
 margin:12px 0;
 padding:16px;
@@ -134,26 +138,30 @@ z-index:999;
 
 .footer{
 font-size:.7em;
-color:#eee;
+color:#ddd;
 }
 </style>
 </head>
 
 <body>
 
+<!-- BACKGROUND -->
+<div class="bg"></div>
+<div class="blur"></div>
+
 <div class="container">
 
-<div class="header">
-<img src="logo-ratnam.png" class="logo">
+<div>
+<div class="logo"></div>
 <div class="tag">IPL & T20 WORLD CUP</div>
 <div class="title">RATNAM All Rounder</div>
 <div class="subs">49,773 Cricket Followers</div>
 </div>
 
 <div class="card">
-IPL & World Cup T20 match analysis,<br>
-session trends, pitch reading<br>
-and team behaviour insights.
+IPL & T20 World Cup match analysis,<br>
+session patterns, pitch behaviour<br>
+and team dynamics — simplified.
 </div>
 
 <a class="join-btn" href="https://t.me/+C2Tll_DJChU1M2M1">
@@ -161,7 +169,7 @@ JOIN TELEGRAM
 </a>
 
 <div class="footer">
-© 2026 RATNAM • Cricket Analysis
+© 2026 RATNAM • Cricket Analysis Desk
 </div>
 
 </div>
